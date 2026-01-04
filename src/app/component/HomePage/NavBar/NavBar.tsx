@@ -1,7 +1,7 @@
 "use client"
 import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
 import Image from "next/image";
-import classes from "./nav-bar.module.css";
+import styles from "./nav-bar.module.css";
 // import CartContext from "../../../common/context/CartContext";
 import { getAbsoluteImagePath } from "../../../helpers/image-utils";
 import { MENU_ITEMS_IMGS_DIRECTORY } from "../Menu/Menu";
@@ -54,7 +54,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
   }
 
   return (
-    <header className={classes.header}>
+    <header className={styles.header}>
       <Link href="/">
         <a className="logo">
           <Image
@@ -66,7 +66,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
         </a>
       </Link>
 
-      {!isDisableNavigateLink && <nav className={`${classes.navbar} ${isNavbarActive ? "active" : ""}`}>
+      {!isDisableNavigateLink && <nav className={`${styles.navbar} ${isNavbarActive ? "active" : ""}`}>
         <a href="#home">home</a>
         <a href="#about">about</a>
         <a href="#menu">menu</a>
@@ -76,7 +76,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
         <a href="#blogs">blogs</a>
       </nav>}
 
-      <div className={classes.icons}>
+      <div className={styles.icons}>
         <div
           className="fas fa-search"
           id="search-btn"
@@ -95,7 +95,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
       </div>
 
       <div
-        className={`${classes.searchForm} ${isSearchFormActive ? "active" : ""
+        className={`${styles.searchForm} ${isSearchFormActive ? "active" : ""
           }`}
       >
         <input type="search" id="search-box" placeholder="search here..." />
@@ -103,7 +103,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
       </div>
 
       {/* <div
-        className={`${classes.cartItemsContainer} ${isCartItemActive ? "active" : ""
+        className={`${styles.cartItemsContainer} ${isCartItemActive ? "active" : ""
           }`}
       > {
           cartItems.map(
@@ -112,7 +112,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
 
               const imagePath = getAbsoluteImagePath(itemInfo.imagePath, MENU_ITEMS_IMGS_DIRECTORY);
               return (
-                <div key={itemInfo._id} className={classes.cartItem}>
+                <div key={itemInfo._id} className={styles.cartItem}>
                   <span className="fas fa-times"></span>
                   <Image
                     src={imagePath}
@@ -120,7 +120,7 @@ const NavBar = ({ isDisableNavigateLink = false }: NavBarProps) => {
                     height={70}
                     alt="cart item"
                   />
-                  <div className={classes.content}>
+                  <div className={styles.content}>
                     <h3>{itemInfo.name}</h3>
                     <div className="price">{`$${itemInfo.currentPrice}/ ${cartItem.quantity}`}</div>
                   </div>

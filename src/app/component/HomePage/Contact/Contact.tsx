@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState } from 'react';
-import classes from './contact.module.css'
+import styles from './contact.module.css'
 
 interface ContactParams {
   name: string,
@@ -48,17 +48,17 @@ const Contact = () => {
     }
   }
   return (
-    <section className={classes.contact} id="contact">
+    <section className={styles.contact} id="contact">
 
       <h1 className="heading"> <span>contact</span> us </h1>
 
-      <div className={classes.row}>
+      <div className={styles.row}>
 
-        <iframe className={classes.map} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1629452077891!5m2!1sen!2sin" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3721.82145167268!2d79.05659764!3d21.11968339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c16ab97963a9%3A0xda2ed05ee7f4a0b2!2sTexas%20Smoke%20Shop%20%5B%20Mate%20Square%20%5D!5e0!3m2!1sen!2sin!4v1767429704256!5m2!1sen!2sin" width="600" height="450" loading="lazy"></iframe>
 
         <form onSubmit={sendMessageHandler}>
           <h3>get in touch</h3>
-          <div className={classes.inputBox}>
+          <div className={styles.inputBox}>
             <span className="fas fa-user"></span>
             <input type="text" placeholder="name"
               id='name'
@@ -67,14 +67,14 @@ const Contact = () => {
               onChange={(event) => setEnteredName(event.target.value)}
             />
           </div>
-          <div className={classes.inputBox}>
+          <div className={styles.inputBox}>
             <span className="fas fa-envelope"></span>
             <input type="email" placeholder="email" id='email'
               required
               value={enteredEmail}
               onChange={(event) => setEnteredEmail(event.target.value)} />
           </div>
-          <div className={classes.inputBox}>
+          <div className={styles.inputBox}>
             <span className="fas fa-phone"></span>
             <input type="number" placeholder="number"
               required

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { getAbsoluteImagePath } from '../../../helpers/image-utils';
 import { Blog } from '../../../model/Blog';
-import classes from './blogs.module.css'
+import styles from './blogs.module.css'
 
 
 interface BlogsProps {
@@ -13,11 +13,11 @@ interface BlogsProps {
 
 const Blogs = ({ blogs }: BlogsProps) => {
   return (
-    <section className={classes.blogs} id="blogs">
+    <section className={styles.blogs} id="blogs">
 
       <h1 className="heading"> our <span>blogs</span> </h1>
 
-      <div className={classes.boxContainer}>
+      <div className={styles.boxContainer}>
         {
           blogs.map(blog => {
 
@@ -27,12 +27,12 @@ const Blogs = ({ blogs }: BlogsProps) => {
 
             return (
 
-              <div key={blog.slug} className={classes.box}>
-                <div className={classes.image}>
+              <div key={blog.slug} className={styles.box}>
+                <div className={styles.image}>
                   <Image width={536} height={250} src={imagePath} layout="responsive" alt="blog image" />
                 </div>
-                <div className={classes.content}>
-                  <a href={`/blog/${slug}`} className={classes.title}>{title}</a>
+                <div className={styles.content}>
+                  <a href={`/blog/${slug}`} className={styles.title}>{title}</a>
                   <span>{`by ${author} / ${parseDate.format('Do MMM, YYYY')}`}</span>
                   <p>{excerpt}</p>
                   <Link href={`/blog/${slug}`} className="btn">

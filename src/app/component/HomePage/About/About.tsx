@@ -1,23 +1,23 @@
 import React from "react";
-import classes from "./about.module.css";
+import styles from "./about.module.css";
 import Image from "next/image";
 
 type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section className={classes.about} id="about">
+    <section className={styles.about} id="about">
       <h1 className={"heading"}>
         {" "}
         <span>about</span> us{" "}
       </h1>
 
-      <div className={classes.row}>
-        <div className={classes.image}>
+      <div className={styles.row}>
+        <div className={styles.image}>
           <Image src="/asset/images/about-img.jpeg" alt="" width={802} height={572} />
         </div>
 
-        <div className={classes.content}>
+        <div className={styles.content}>
           <h3>what makes our coffee special?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -30,7 +30,7 @@ const About = (props: Props) => {
             enim quod veritatis, nihil voluptas culpa! Neque consectetur
             obcaecati sapiente?
           </p>
-          <a href="#" className={classes.btn}>
+          <a href="#" className={styles.btn}>
             learn more
           </a>
         </div>

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { About, Blogs, Contact, Footer, Hero, Menu, Products, Review } from "./component/HomePage";
+import Hero from "./component/HomePage/Hero/Hero";
+import About from "./component/HomePage/About/About";
+import Review from "./component/HomePage/Review/Review";
+import Footer from "./component/HomePage/Footer/Footer";
 
 export default function Home() {
   return (
@@ -8,10 +11,10 @@ export default function Home() {
       <main>
         {/* <NavBar key={'amol'}/> */}
         <Hero key='hero'/>
-        {/* <About key={'alka'}/> */}
+        <About key={'about'}/>
         {/* <Products key={'products'}/> */}
         {/* <Menu key={'menu'}/> */}
-        {/* <Review key={'review'}/> */}
+        <Review key={'review'}/>
         {/* <Contact key={''}/> */}
         {/* <Blogs blogs={blogs} /> */}
         <Footer />
