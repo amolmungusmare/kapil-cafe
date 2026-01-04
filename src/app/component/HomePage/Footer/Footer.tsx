@@ -23,7 +23,7 @@ const Footer = () => {
         <a href="#">blogs</a>
       </div>
 
-      <div className={styles.credit}>Design by <span>Amol Mungusmare</span> | Copyright © 2025</div>
+      <div className={styles.credit}>Design by <span>Amol M</span> | Copyright ©{ new Date().getFullYear()}</div>
 
     </section>
   );
